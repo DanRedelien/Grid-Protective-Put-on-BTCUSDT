@@ -1,4 +1,4 @@
-# 📈 Bitcoin Hedged Grid Strategy Backtester
+# Bitcoin Hedged Grid Strategy Backtester
 
 A research-grade backtesting engine designed to simulate a **Volatility Harvesting (Grid)** strategy protected by **Tail Risk Hedging (Put Options)**.
 
@@ -6,25 +6,25 @@ This project simulates the performance of a portfolio that accumulates Bitcoin u
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 * **Dynamic Grid Execution:**
-* Uses **ATR (Average True Range)** to dynamically adjust grid spacing based on market volatility.
-* Accumulates assets during dips and takes profits on local bounces.
+  * Uses **ATR (Average True Range)** to dynamically adjust grid spacing based on market volatility.
+  * Accumulates assets during dips and takes profits on local bounces.
 
 * **Synthetic Options Hedging:**
-* Simulates the purchase of OTM (Out-of-the-Money) Put options to hedge against drops >10%.
-* Includes a **Black-Scholes Pricing Model** accounting for Volatility Risk Premium (VRP) and time decay (Theta).
+  * Simulates the purchase of OTM (Out-of-the-Money) Put options to hedge against drops >10%.
+  * Includes a **Black-Scholes Pricing Model** accounting for Volatility Risk Premium (VRP) and time decay (Theta).
 
 * **Advanced Benchmarking:**
-* Compares strategy performance against **Buy & Hold**, **DCA (Dollar Cost Averaging)**, and **Volatility Targeting** strategies.
+  * Compares strategy performance against **Buy & Hold**, **DCA (Dollar Cost Averaging)**, and **Volatility Targeting** strategies.
 
 * **Institutional-Grade Analytics:**
-* Calculates **XIRR** (Extended Internal Rate of Return) for accurate cash flow analysis.
-* Computes **Rolling VaR (95%)**, Sharpe, Sortino, and Calmar ratios.
-* Visualizes "Fat Tail" risks and drawdown distributions.
+  * Calculates **XIRR** (Extended Internal Rate of Return) for accurate cash flow analysis.
+  * Computes **Rolling VaR (95%)**, Sharpe, Sortino, and Calmar ratios.
+  * Visualizes "Fat Tail" risks and drawdown distributions.
 
-## 🛠 Project Structure
+## Project Structure
 
 * `main.py`: The entry point. Orchestrates data fetching, backtesting, and rendering the dashboard.
 * `config.py`: Central configuration file (Capital, Grid settings, Hedging parameters, Timeframes).
@@ -34,7 +34,7 @@ This project simulates the performance of a portfolio that accumulates Bitcoin u
 * `logger_and_analytics.py`: Handles statistical analysis (Normal Distribution fitting, VaR) and matplotlib visualizations.
 * `data_fetcher.py`: Wrapper around `ccxt` to download historical OHLCV data from Binance.
 
-## 📊 Analytics Dashboard
+## Analytics Dashboard
 
 The engine generates a comprehensive dashboard including:
 
@@ -43,7 +43,7 @@ The engine generates a comprehensive dashboard including:
 3. **Rolling Metrics:** 6-month Rolling Sharpe Ratio.
 4. **Returns Distribution:** Histogram of daily returns vs. Normal Distribution (to visualize Kurtosis).
 
-## ⚡ Quick Start
+## Quick Start
 
 1. **Clone the repository:**
 ```bash
@@ -72,7 +72,7 @@ python main.py
 
 ---
 
-## ⚠️ Critical Analysis & Limitations (The "Cons")
+## 📌 Critical Analysis & Limitations (The "Cons")
 
 While this backtester provides valuable insights, users must be aware of the following limitations regarding real-world application:
 
